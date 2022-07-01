@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">AnorBank</string>
-    <string name="txtWelcome">Xush kelibsiz</string>
-    <string name="chooseLanguage">Ilova tilini tanlang</string>
+    <string name="txtWelcome">Добро пожаловать в</string>
+    <string name="chooseLanguage">Выберите язык приложения</string>
     <string name="uz">UZ</string>
     <string name="ru">RU</string>
     <string name="uk">UK</string>
