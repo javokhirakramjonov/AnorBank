@@ -37,7 +37,6 @@
             app:fontFamily="@font/montserrat_semi_bold" />
 
         <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/txtAnorbank"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"

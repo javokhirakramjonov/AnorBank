@@ -4,16 +4,28 @@ import android.os.Bundle
 import android.view.View
 import android.view.animation.DecelerateInterpolator
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
+import androidx.navigation.fragment.findNavController
 import by.kirich1409.viewbindingdelegate.viewBinding
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import uz.gita.anorbank.R
 import uz.gita.anorbank.databinding.ScreenSplashBinding
+import uz.gita.anorbank.ui.viewModel.SplashScreenVM
+import uz.gita.anorbank.ui.viewModel.impl.SplashScreenVMImpl
 
 class SplashScreen : Fragment(R.layout.screen_splash) {
 
+    private val viewModel: SplashScreenVM by viewModels<SplashScreenVMImpl>()
     private val binding by viewBinding(ScreenSplashBinding::bind)
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        viewModel.goRegisterScreenLD.observe(this) {
+            findNavController().navigate(R.id.action_splashScreen_to_registerScreen)
+        }
+    }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) = with(binding) {
         super.onViewCreated(view, savedInstanceState)
@@ -51,6 +63,15 @@ class SplashScreen : Fragment(R.layout.screen_splash) {
                     }
             }
         }
-        Unit
+
+        buttonUZ.setOnClickListener {
+            viewModel.goRegisterScreen()
+        }
+        buttonRU.setOnClickListener {
+            viewModel.goRegisterScreen()
+        }
+        buttonUK.setOnClickListener {
+            viewModel.goRegisterScreen()
+        }
     }
 }
