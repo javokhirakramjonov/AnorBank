@@ -13,9 +13,15 @@
     <string name="surname">Surname:</string>
     <string name="hint_surname">Akramjonov</string>
     <string name="password">Password</string>
-    <string name="confirm_password">confirm password</string>
+    <string name="confirm_password">Confirm password</string>
     <string name="txtContinue">Continue</string>
     <string name="privacy">Continuing, I confirm\n that I am familiar with Universal Agreement</string>
     <string name="front_phone">(+998)</string>
     <string name="error_name">Invalid name</string>
+    <string name="error_surname">Invalid surname</string>
+    <string name="error_password_match">Passwords are not match</string>
+    <string name="error_password_format">Invalid password format</string>
+    <string name="verificaion">Verificaion</string>
+    <string name="verify_message">Please enter the SMS code to verify phone number</string>
+    <string name="hint_verify">Enter the SMS code</string>
 </resources>

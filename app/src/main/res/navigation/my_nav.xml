@@ -12,11 +12,32 @@
         tools:layout="@layout/screen_splash">
         <action
             android:id="@+id/action_splashScreen_to_registerScreen"
-            app:destination="@id/registerScreen" />
+            app:destination="@id/registerScreen"
+            app:popUpTo="@id/splashScreen"
+            app:popUpToInclusive="true" />
     </fragment>
     <fragment
         android:id="@+id/registerScreen"
         android:name="uz.gita.anorbank.ui.screen.RegisterScreen"
         android:label="screen_reigstration"
-        tools:layout="@layout/screen_reigstration" />
+        tools:layout="@layout/screen_reigstration" >
+        <argument
+            android:name="language"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_registerScreen_to_splashScreen"
+            app:destination="@id/splashScreen" />
+        <action
+            android:id="@+id/action_registerScreen_to_verificationScreen"
+            app:destination="@id/verificationScreen" />
+    </fragment>
+    <fragment
+        android:id="@+id/verificationScreen"
+        android:name="uz.gita.anorbank.ui.screen.VerificationScreen"
+        android:label="screen_verify"
+        tools:layout="@layout/screen_verify" >
+        <argument
+            android:name="user"
+            app:argType="uz.gita.anorbank.data.model.simple.RegisterModel" />
+    </fragment>
 </navigation>

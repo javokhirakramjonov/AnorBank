@@ -1,6 +1,7 @@
 package uz.gita.anorbank.data.model.simple
 
 import uz.gita.anorbank.data.model.request.RegisterRequest
+import java.io.Serializable
 
 data class RegisterModel(
     val firstName: String,
@@ -8,7 +9,7 @@ data class RegisterModel(
     val phone: String,
     val password1: String,
     val password2: String
-) {
+) : Serializable {
     fun toRequest(): RegisterRequest {
         return RegisterRequest(
             firstName,
@@ -17,7 +18,7 @@ data class RegisterModel(
             password1
         )
     }
-    fun getPhone(phone: String) : String {
+    private fun getPhone(phone: String) : String {
         val temp = StringBuilder()
         for(i in phone.toCharArray()) {
             if(i != ' ')

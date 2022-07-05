@@ -5,4 +5,17 @@
     <string name="uz">UZ</string>
     <string name="ru">RU</string>
     <string name="uk">UK</string>
+    <string name="authorization">Authorization</string>
+    <string name="enter_phone">Enter your phone number to create or sign in to an account</string>
+    <string name="hint_phone">93-668-71-18</string>
+    <string name="name">Name:</string>
+    <string name="hint_name">Javohir</string>
+    <string name="surname">Surname:</string>
+    <string name="hint_surname">Akramjonov</string>
+    <string name="password">Password</string>
+    <string name="confirm_password">Confirm password</string>
+    <string name="txtContinue">Continue</string>
+    <string name="privacy">Continuing, I confirm\n that I am familiar with Universal Agreement</string>
+    <string name="front_phone">(+998)</string>
+    <string name="error_name">Invalid name</string>
 </resources>

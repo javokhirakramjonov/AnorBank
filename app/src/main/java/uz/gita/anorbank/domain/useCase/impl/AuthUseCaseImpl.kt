@@ -18,4 +18,10 @@ class AuthUseCaseImpl @Inject constructor(
     }.catch {
         emit(Result.failure(it))
     }.flowOn(Dispatchers.IO)
+
+    override fun verifyUser(code: String): Flow<Result<Unit>> = flow<Result<Unit>> {
+        emit(authRepository.verifyUser(code))
+    }.catch {
+        emit(Result.failure(it))
+    }.flowOn(Dispatchers.IO)
 }

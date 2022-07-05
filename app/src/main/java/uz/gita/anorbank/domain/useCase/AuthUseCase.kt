@@ -4,5 +4,6 @@ import kotlinx.coroutines.flow.Flow
 import uz.gita.anorbank.data.model.simple.RegisterModel
 
 interface AuthUseCase {
-    fun registerUser(user: RegisterModel) : Flow<Result<Unit>>
+    fun registerUser(user: RegisterModel): Flow<Result<Unit>>
+    fun verifyUser(code: String): Flow<Result<Unit>>
 }

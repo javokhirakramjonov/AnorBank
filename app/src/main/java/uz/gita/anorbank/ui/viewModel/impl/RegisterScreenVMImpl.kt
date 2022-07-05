@@ -19,13 +19,18 @@ class RegisterScreenVMImpl @Inject constructor(
     override val errorMessageLD = MutableLiveData<String>()
     override val continueButtonStateLD = MutableLiveData<Boolean>()
     override val invalidFieldsLD = MutableLiveData<List<RegisterErrorEnum>>()
+    override val goSplashScreenLD = MutableLiveData<Unit>()
+    override val correctFormPhoneLD = MutableLiveData<String>()
+    override val goVerificationScreenLD = MutableLiveData<Unit>()
 
     override fun checkData(user: RegisterModel, privacyPolicyState: Boolean) {
         val list = ArrayList<RegisterErrorEnum>()
+        if (!("[0-9]{2} [0-9]{3} [0-9]{2} [0-9]{2}".toRegex().matches(user.phone)))
+            list.add(RegisterErrorEnum.PHONE)
         if (!("[A-Za-z]*".toRegex().matches(user.firstName) && user.firstName.length in 3..20))
             list.add(RegisterErrorEnum.FIRST_NAME)
         if (!("[A-Za-z]*".toRegex().matches(user.lastName) && user.lastName.length in 3..20))
-            list.add(RegisterErrorEnum.FIRST_NAME)
+            list.add(RegisterErrorEnum.LAST_NAME)
         if (!("[0-9]{2} [0-9]{3} [0-9]{2} [0-9]{2}".toRegex().matches(user.phone)))
             list.add(RegisterErrorEnum.PHONE)
         if (user.password1.length < 6)
@@ -39,12 +44,33 @@ class RegisterScreenVMImpl @Inject constructor(
     override fun goVerification(user: RegisterModel) {
         authUseCase.registerUser(user).onEach {
             it.onSuccess {
-                errorMessageLD.value = "Success"
+                goVerificationScreenLD.value = Unit
             }
             it.onFailure { error ->
                 errorMessageLD.value = error.message
             }
         }.launchIn(viewModelScope)
+    }
+
+    override fun goSplashScreen() {
+        goSplashScreenLD.value = Unit
+    }
+
+    override fun correctForm(phone: String) {
+        val phoneTemp = phone.trim()
+        val temp = StringBuilder()
+        phoneTemp.toCharArray().forEach {
+            if (it != ' ')
+                temp.append(it)
+        }
+        if (temp.length > 2)
+            temp.insert(2, ' ');
+        if (temp.length > 6)
+            temp.insert(6, ' ');
+        if (temp.length > 9)
+            temp.insert(9, ' ');
+        if (phoneTemp != temp.toString())
+            correctFormPhoneLD.value = temp.toString()
     }
 
 }

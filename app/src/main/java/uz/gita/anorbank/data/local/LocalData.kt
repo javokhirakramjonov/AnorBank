@@ -13,4 +13,8 @@ class LocalData @Inject constructor(@ApplicationContext context: Context) {
     var accessToken: String
         get() = local.getString("ACCESS_TOKEN", "")!!
         set(value) = local.edit().putString("ACCESS_TOKEN", value).apply()
+
+    var refreshToken: String
+        get() = local.getString("REFRESH_TOKEN", "")!!
+        set(value) = local.edit().putString("REFRESH_TOKEN", value).apply()
 }

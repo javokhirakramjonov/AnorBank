@@ -23,7 +23,7 @@ class SplashScreen : Fragment(R.layout.screen_splash) {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         viewModel.goRegisterScreenLD.observe(this) {
-            findNavController().navigate(R.id.action_splashScreen_to_registerScreen)
+            findNavController().navigate(SplashScreenDirections.actionSplashScreenToRegisterScreen(it))
         }
     }
 
@@ -32,16 +32,16 @@ class SplashScreen : Fragment(R.layout.screen_splash) {
 
         lifecycleScope.launch {
             title.apply {
-                visibility = View.INVISIBLE
+                visibility = View.GONE
                 animate().translationYBy(1000f)
             }
             txtChooseLanguage.apply {
-                visibility = View.INVISIBLE
+                visibility = View.GONE
                 animate().translationYBy(1000f)
             }
             languages.apply {
-                visibility = View.INVISIBLE
-                animate().translationYBy(1000f)
+                visibility = View.GONE
+                animate().alpha(0f)
             }
             delay(4000)
             title.apply {
@@ -55,23 +55,22 @@ class SplashScreen : Fragment(R.layout.screen_splash) {
                                 .withEndAction {
                                     languages.apply {
                                         visibility = View.VISIBLE
-                                        animate().setDuration(500).translationYBy(-1000f).interpolator =
-                                            DecelerateInterpolator()
+                                        animate().setDuration(100).alpha(1f)
                                     }
-                                }.start()
+                                }
                         }
-                    }
+                    }.start()
             }
         }
 
         buttonUZ.setOnClickListener {
-            viewModel.goRegisterScreen()
+            viewModel.goRegisterScreen(R.drawable.uz_flag)
         }
         buttonRU.setOnClickListener {
-            viewModel.goRegisterScreen()
+            viewModel.goRegisterScreen(R.drawable.ru_flag)
         }
         buttonUK.setOnClickListener {
-            viewModel.goRegisterScreen()
+            viewModel.goRegisterScreen(R.drawable.uk_flag)
         }
     }
 }

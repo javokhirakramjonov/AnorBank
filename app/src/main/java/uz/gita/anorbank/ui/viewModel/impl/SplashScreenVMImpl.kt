@@ -5,9 +5,9 @@ import androidx.lifecycle.ViewModel
 import uz.gita.anorbank.ui.viewModel.SplashScreenVM
 
 class SplashScreenVMImpl : ViewModel(), SplashScreenVM {
-    override val goRegisterScreenLD = MutableLiveData<Unit>()
+    override val goRegisterScreenLD = MutableLiveData<Int>()
 
-    override fun goRegisterScreen() {
-        goRegisterScreenLD.value = Unit
+    override fun goRegisterScreen(language: Int) {
+        goRegisterScreenLD.value = language
     }
 }
