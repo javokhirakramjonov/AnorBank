@@ -11,6 +11,7 @@ interface VerificationScreenVM {
     val errorMessageLD: LiveData<String>
     val resendButtonStateLD: LiveData<Boolean>
     val sendCodeButtonLD: LiveData<Boolean>
+    val goPinCodeScreenLD: LiveData<Unit>
 
     fun resend(user: RegisterModel)
     fun sendCode(code: String)

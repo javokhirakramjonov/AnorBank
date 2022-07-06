@@ -3,12 +3,17 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/javok/AndroidStudioProjects/AnorBank/app/src/main/res/drawable/background_button_code.xml" value="0.1675" />
         <entry key="..\:/Users/javok/AndroidStudioProjects/AnorBank/app/src/main/res/drawable/background_button_round8.xml" value="0.1525" />
         <entry key="..\:/Users/javok/AndroidStudioProjects/AnorBank/app/src/main/res/drawable/background_button_transparent_round8.xml" value="0.1675" />
         <entry key="..\:/Users/javok/AndroidStudioProjects/AnorBank/app/src/main/res/drawable/background_edit_round8.xml" value="0.1525" />
+        <entry key="..\:/Users/javok/AndroidStudioProjects/AnorBank/app/src/main/res/drawable/background_edit_round8_white.xml" value="0.1675" />
         <entry key="..\:/Users/javok/AndroidStudioProjects/AnorBank/app/src/main/res/drawable/background_gradient_main_color.xml" value="0.1525" />
+        <entry key="..\:/Users/javok/AndroidStudioProjects/AnorBank/app/src/main/res/drawable/ic_backspace.xml" value="0.1675" />
+        <entry key="..\:/Users/javok/AndroidStudioProjects/AnorBank/app/src/main/res/drawable/ic_cycle.xml" value="0.1675" />
         <entry key="..\:/Users/javok/AndroidStudioProjects/AnorBank/app/src/main/res/drawable/selector_button_corner8.xml" value="0.184" />
         <entry key="..\:/Users/javok/AndroidStudioProjects/AnorBank/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/Users/javok/AndroidStudioProjects/AnorBank/app/src/main/res/layout/screen_pin_code.xml" value="0.22" />
         <entry key="..\:/Users/javok/AndroidStudioProjects/AnorBank/app/src/main/res/layout/screen_reigstration.xml" value="0.22" />
         <entry key="..\:/Users/javok/AndroidStudioProjects/AnorBank/app/src/main/res/layout/screen_splash.xml" value="0.18" />
         <entry key="..\:/Users/javok/AndroidStudioProjects/AnorBank/app/src/main/res/layout/screen_verify.xml" value="0.33" />

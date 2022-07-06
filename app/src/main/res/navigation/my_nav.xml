@@ -35,9 +35,19 @@
         android:id="@+id/verificationScreen"
         android:name="uz.gita.anorbank.ui.screen.VerificationScreen"
         android:label="screen_verify"
-        tools:layout="@layout/screen_verify" >
+        tools:layout="@layout/screen_verify">
         <argument
             android:name="user"
             app:argType="uz.gita.anorbank.data.model.simple.RegisterModel" />
+        <action
+            android:id="@+id/action_verificationScreen_to_pinCodeScreen"
+            app:destination="@id/pinCodeScreen"
+            app:popUpTo="@id/verificationScreen"
+            app:popUpToInclusive="true" />
     </fragment>
+    <fragment
+        android:id="@+id/pinCodeScreen"
+        android:name="uz.gita.anorbank.ui.screen.PinCodeScreen"
+        android:label="screen_pin_code"
+        tools:layout="@layout/screen_pin_code" />
 </navigation>

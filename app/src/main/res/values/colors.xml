@@ -13,4 +13,5 @@
     <color name="mainBackground">#AE0E4D</color>
     <color name="grayBackground">#F4F6F5</color>
     <color name="textDark">#545768</color>
+    <color name="textLight">#BCBCBC</color>
 </resources>

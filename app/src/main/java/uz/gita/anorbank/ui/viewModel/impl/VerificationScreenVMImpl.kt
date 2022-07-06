@@ -1,6 +1,5 @@
 package uz.gita.anorbank.ui.viewModel.impl
 
-import android.util.Log
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
@@ -27,6 +26,8 @@ class VerificationScreenVMImpl @Inject constructor(
     override val errorMessageLD = MutableLiveData<String>()
     override val resendButtonStateLD = MutableLiveData<Boolean>()
     override val sendCodeButtonLD = MutableLiveData<Boolean>()
+    override val goPinCodeScreenLD = MutableLiveData<Unit>()
+
     private var timer: Job? = null
 
     init {
@@ -62,9 +63,8 @@ class VerificationScreenVMImpl @Inject constructor(
         authUseCase.verifyUser(code).onEach {
             codeStateLD.value = false
             it.onSuccess {
-                //goMainScreen
                 timer?.cancel()
-                Log.d("TTT", "success")
+                goPinCodeScreenLD.value = Unit
             }
             it.onFailure {
                 inputCodeStateLD.value = true

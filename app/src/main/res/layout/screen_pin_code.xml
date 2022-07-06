@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grayBackground"
+    tools:context=".ui.screen.PinCodeScreen">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/buttonBack"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_margin="24dp"
+        android:background="@drawable/background_button_transparent_round8"
+        android:clickable="true"
+        android:focusable="true"
+        android:src="@drawable/ic_back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/icon"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/dummy"
+        app:layout_constraintBottom_toTopOf="@id/txt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/buttonBack" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Create a PIN"
+        android:textSize="30sp"
+        app:fontFamily="@font/montserrat_semi_bold"
+        app:layout_constraintBottom_toTopOf="@id/containerCode"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/icon" />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/containerCode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@id/numbers"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txt">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="8dp"
+            android:background="@drawable/background_edit_round8_white"
+            android:backgroundTint="@color/white"
+            android:paddingHorizontal="20dp"
+            android:paddingVertical="16dp"
+            android:text="1"
+            android:textSize="18sp"
+            app:fontFamily="@font/montserrat_semi_bold" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="8dp"
+            android:background="@drawable/background_edit_round8_white"
+            android:backgroundTint="@color/white"
+            android:paddingHorizontal="20dp"
+            android:paddingVertical="16dp"
+            android:text="1"
+            android:textSize="18sp"
+            app:fontFamily="@font/montserrat_semi_bold" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="8dp"
+            android:background="@drawable/background_edit_round8_white"
+            android:backgroundTint="@color/white"
+            android:paddingHorizontal="20dp"
+            android:paddingVertical="16dp"
+            android:text="1"
+            android:textSize="18sp"
+            app:fontFamily="@font/montserrat_semi_bold" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="8dp"
+            android:background="@drawable/background_edit_round8_white"
+            android:backgroundTint="@color/white"
+            android:paddingHorizontal="20dp"
+            android:paddingVertical="16dp"
+            android:text="1"
+            android:textSize="18sp"
+            app:fontFamily="@font/montserrat_semi_bold" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="8dp"
+            android:background="@drawable/background_edit_round8_white"
+            android:backgroundTint="@color/white"
+            android:paddingHorizontal="20dp"
+            android:paddingVertical="16dp"
+            android:text="1"
+            android:textSize="18sp"
+            app:fontFamily="@font/montserrat_semi_bold" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="8dp"
+            android:background="@drawable/background_edit_round8_white"
+            android:backgroundTint="@color/white"
+            android:paddingHorizontal="20dp"
+            android:paddingVertical="16dp"
+            android:text="1"
+            android:textSize="18sp"
+            app:fontFamily="@font/montserrat_semi_bold" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/numbers"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="-20dp"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="16dp"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/codeButton1"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:background="@drawable/background_button_code"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center"
+                android:text="1"
+                android:textColor="@color/textLight"
+                android:textSize="30sp"
+                app:fontFamily="@font/montserrat_semi_bold" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/codeButton2"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:background="@drawable/background_button_code"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center"
+                android:text="2"
+                android:textColor="@color/textLight"
+                android:textSize="30sp"
+                app:fontFamily="@font/montserrat_semi_bold" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/codeButton3"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:background="@drawable/background_button_code"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center"
+                android:text="3"
+                android:textColor="@color/textLight"
+                android:textSize="30sp"
+                app:fontFamily="@font/montserrat_semi_bold" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/codeButton4"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:background="@drawable/background_button_code"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center"
+                android:text="4"
+                android:textColor="@color/textLight"
+                android:textSize="30sp"
+                app:fontFamily="@font/montserrat_semi_bold" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/codeButton5"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:background="?android:selectableItemBackgroundBorderless"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center"
+                android:text="5"
+                android:textColor="@color/textLight"
+                android:textSize="30sp"
+                app:fontFamily="@font/montserrat_semi_bold" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/codeButton6"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:background="@drawable/background_button_code"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center"
+                android:text="6"
+                android:textColor="@color/textLight"
+                android:textSize="30sp"
+                app:fontFamily="@font/montserrat_semi_bold" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/codeButton7"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:background="@drawable/background_button_code"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center"
+                android:text="7"
+                android:textColor="@color/textLight"
+                android:textSize="30sp"
+                app:fontFamily="@font/montserrat_semi_bold" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/codeButton8"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:background="@drawable/background_button_code"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center"
+                android:text="8"
+                android:textColor="@color/textLight"
+                android:textSize="30sp"
+                app:fontFamily="@font/montserrat_semi_bold" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/codeButton9"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:background="@drawable/background_button_code"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center"
+                android:text="9"
+                android:textColor="@color/textLight"
+                android:textSize="30sp"
+                app:fontFamily="@font/montserrat_semi_bold" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/codeButton10"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:background="@drawable/background_button_code"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center"
+                android:padding="20dp"
+                android:src="@drawable/ic_cycle" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/codeButton11"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:background="@drawable/background_button_code"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center"
+                android:text="0"
+                android:textColor="@color/textLight"
+                android:textSize="30sp"
+                app:fontFamily="@font/montserrat_semi_bold" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/codeButton12"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:background="@drawable/background_button_code"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center"
+                android:padding="20dp"
+                android:src="@drawable/ic_backspace" />
+
+            <androidx.constraintlayout.helper.widget.Flow
+                android:id="@+id/containerCodeFlow"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                app:constraint_referenced_ids="codeButton1,codeButton2,codeButton3,codeButton4,codeButton5,codeButton6,codeButton7,codeButton8,codeButton9,codeButton10,codeButton11,codeButton12"
+                app:flow_maxElementsWrap="3"
+                app:flow_verticalGap="10dp"
+                app:flow_wrapMode="chain"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

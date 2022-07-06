@@ -11,7 +11,6 @@ import androidx.navigation.fragment.navArgs
 import by.kirich1409.viewbindingdelegate.viewBinding
 import dagger.hilt.android.AndroidEntryPoint
 import uz.gita.anorbank.R
-import uz.gita.anorbank.data.model.simple.RegisterModel
 import uz.gita.anorbank.databinding.ScreenVerifyBinding
 import uz.gita.anorbank.ui.viewModel.VerificationScreenVM
 import uz.gita.anorbank.ui.viewModel.impl.VerificationScreenVMImpl
@@ -28,6 +27,9 @@ class VerificationScreen : Fragment(R.layout.screen_verify) {
         super.onCreate(savedInstanceState)
         viewModel.goBackLD.observe(this) {
             findNavController().popBackStack()
+        }
+        viewModel.goPinCodeScreenLD.observe(this) {
+            findNavController().navigate(R.id.action_verificationScreen_to_pinCodeScreen)
         }
     }
 
